@@ -12,6 +12,8 @@ int number1 = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите 2ое число: ");
 int number2 = int.Parse(Console.ReadLine());
 
+// Проверка чисел на квадрат
+
 if (number2 * number2 == number1)
     {
        Console.WriteLine($"Квадрат числа {number2} соответствует {number1}"); 
