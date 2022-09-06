@@ -1,4 +1,6 @@
-﻿void CompareDigits ()
+﻿// В случайно сгенерированном 2ухзначном числе показываем, какая цифра больше.
+
+void CompareDigits ()
     {
     int number = new Random().Next(10, 100);
     int number1 = number / 10;
