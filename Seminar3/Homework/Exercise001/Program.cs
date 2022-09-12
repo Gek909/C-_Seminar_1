@@ -31,3 +31,4 @@ int num = int.Parse(Console.ReadLine());
 int[] array = NumberToArray(num);
 string message = PalindromeCheck(array);
 Console.WriteLine($"Число {num} - {message}");
+ 
