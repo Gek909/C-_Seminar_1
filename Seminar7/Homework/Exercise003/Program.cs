@@ -47,11 +47,12 @@ string GetArithmeticMeanInEachColumn(int[,] array)
     return resultText;
 }
 
-
 int[,] array = new int[n, m];
 array = GetAndFillRandomArray(n, m);
+
 Console.WriteLine("Массив с указанными параметрами:");
 PrintArray(array);
+
 string res = GetArithmeticMeanInEachColumn(array);
 Console.WriteLine($"Среднее арифметическое каждого столбца:\n"+
 $"{res}");

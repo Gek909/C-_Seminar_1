@@ -32,6 +32,7 @@ void PrintArray(double[,] array)
 
 double[,] array = new double[m, n];
 array = GetAndFillRandomDoubleArray(m, n);
+
 Console.WriteLine("Массив с указанными параметрами:");
 PrintArray(array);
 
