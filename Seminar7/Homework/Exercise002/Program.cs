@@ -40,7 +40,7 @@ string GetElementUsingIndex(int[,] array, int sizeN, int sizeM, int n, int m)
         {
             if (i == n & j == m)
             {
-                element ="Элемент с указанным индексом: "+ Convert.ToString(array[i, j]);
+                element = "Элемент с указанным индексом: " + Convert.ToString(array[i, j]);
             }
         }
     }

@@ -41,7 +41,7 @@ string GetArithmeticMeanInEachColumn(int[,] array)
             result = array[j, i] + result;
         }
         result = result / n;
-        resultText = resultText + Convert.ToString(Math.Round(result,2))+"  ";
+        resultText = resultText + Convert.ToString(Math.Round(result, 2)) + "  ";
         result = 0;
     }
     return resultText;
@@ -54,6 +54,6 @@ Console.WriteLine("Массив с указанными параметрами:"
 PrintArray(array);
 
 string res = GetArithmeticMeanInEachColumn(array);
-Console.WriteLine($"Среднее арифметическое каждого столбца:\n"+
+Console.WriteLine($"Среднее арифметическое каждого столбца:\n" +
 $"{res}");
 
