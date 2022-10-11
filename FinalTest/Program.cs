@@ -29,17 +29,41 @@ string[] FillArray(string[] array, int size)
 
 void PrintArray(string[] array)
 {
-    for (int i = 0; i < array.Length; i++)
+    if (array.Length == 0)
     {
-        if (i == 0) Console.Write($"[({array[i]}),");
-        if ((i > 0) & (i < array.Length - 1)) Console.Write($"({array[i]}),");
-        if (i == array.Length - 1) Console.Write($"({array[i]})]");
+        Console.WriteLine("[]");
+    }
+    else if (array.Length == 1)
+    {
+        Console.Write($"[{array[0]}]");
+    }
+    else
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (i == 0) Console.Write($"[{array[i]}, ");
+            if ((i > 0) & (i < array.Length - 1)) Console.Write($" {array[i]}, ");
+            if (i == array.Length - 1) Console.Write($" {array[i]}]");
+        }
     }
 }
 
 
+string[] GetThreeOrLessCharElements(string[] array, string[] newArray)
+{
+    int newArrayIndex = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            newArray[newArrayIndex] = array[i];
+            newArrayIndex++;
+        }
+    }
+    return newArray;
+}
 
-string[] GetThreeOrLessCharElements(string[] array)
+int GetNewArraySize(string[] array)
 {
     int newArraySize = 0;
     for (int i = 0; i < array.Length; i++)
@@ -49,12 +73,10 @@ string[] GetThreeOrLessCharElements(string[] array)
             newArraySize++;
         }
     }
-
+    return newArraySize;
 }
 
-
-
-Console.WriteLine("Введите количество элементов массива: ");
+Console.WriteLine("Введите целое число, равное количеству элементов инициируемого массива: ");
 
 int size = GetNumberFromConsole();
 string[] array = new string[size];
@@ -62,4 +84,9 @@ string[] array = new string[size];
 Console.WriteLine("Введите элементы массива по порядку: ");
 
 array = FillArray(array, size);
-PrintArray(array);
+int newArraySize = GetNewArraySize(array);
+string[] newArray = new string[newArraySize];
+newArray = GetThreeOrLessCharElements(array, newArray);
+PrintArray(newArray);
+
+
